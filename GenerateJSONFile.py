@@ -7,7 +7,7 @@ repoimgpath="https://raw.githubusercontent.com/teabreaktime/pictogramas/master/p
 categories=os.listdir(path)
 pictograms={}
 for c in categories:
-    pictograms[c]=repoimgpath+c
+    pictograms[c.replace('.png','')]=repoimgpath+c
 
 with open('pictogramas.json', 'w') as outfile:
     json.dump(pictograms, outfile)
